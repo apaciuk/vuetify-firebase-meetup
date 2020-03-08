@@ -1,17 +1,12 @@
 <template>
- <v-card height="150">
-    <v-footer
-      absolute
-      class="font-weight-medium"
+ <v-footer>
+    <v-col
+      class="text-center"
+      cols="12"
     >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        {{ new Date().getFullYear() }} — <strong>Xhostcom</strong>
-      </v-col>
-    </v-footer>
-  </v-card>
+      {{ new Date().getFullYear() }} — <strong>Xhostcom</strong>
+    </v-col>
+  </v-footer>
 </template>
 
 <script>
@@ -23,5 +18,6 @@ export default {
 <style scoped>
 .v-footer {
 background-color: gainsboro!important;
+text-align: center;
 }
 </style>
