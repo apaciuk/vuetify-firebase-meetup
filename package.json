@@ -1,7 +1,7 @@
 {
-  "name": "vuetify-firebase",
+  "name": "vuetify-firebase-meetup",
   "version": "1.0.0",
-  "description": "A meetup app built with Vue + Vuetify + Firebase",
+  "description": "A meetup app built with Vue + Vuetify + Firebase with stylus sass",
   "author": "Paul Anthony McGowan <support@xhostcom.com>",
   "private": true,
   "scripts": {

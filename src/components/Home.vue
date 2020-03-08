@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    <v-layout row wrap>
+    <v-layout row wrap class="mb-3">
       <v-flex xs12 sm6 class="text-xs-center text-sm-right">
         <v-btn large router to="/meetups" class="info">Explore Meetups</v-btn>
       </v-flex>
@@ -13,10 +13,10 @@
         <v-carousel>
           <v-carousel-item
             v-for="meetup in meetups"
-            :src="meetup.imageUrl"
-            :key="meetup.id">
+            v-bind:src="meetup.imageUrl"
+            v-bind:key="meetup.id">
             <div class="title">
-              {{ meetup.title }}
+              <h3 class="title" style="color:#fff;">{{ meetup.title }}</h3>
             </div>
           </v-carousel-item>
         </v-carousel>
@@ -31,6 +31,26 @@
 </template>
 <script>
 export default {
+  data () {
+    return {
+      meetups: [
+        { imageUrl: './static/new-york.webp', id: 'fghstgfyer653', title: 'Meetup in New York' },
+                { imageUrl: './static/berlin.webp', id: 'hdgdtsdfrt6745', title: 'Meetup in Berlin' },
+                                { imageUrl: './static/paris.webp', id: 'hdgdtsdfrt6745', title: 'Meetup in Paris' },
+                                 { imageUrl: './static/moscow.webp', id: 'hdgdtsdfrt6745', title: 'Meetup in Moscow' },
+                                  { imageUrl: './static/amsterdam.webp', id: 'hdgdtsdfrt6745', title: 'Meetup in Amsterdam' }
+
+      ]
+
+    }
+  }
+}
+
+</script>
+
+<style lang="stylus" scoped>
+.title {
 
 }
-</script>
+
+</style>>
