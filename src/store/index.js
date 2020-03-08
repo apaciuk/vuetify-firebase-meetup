@@ -46,9 +46,9 @@ export const store = new Vuex.Store({
     },
     loadedMeetup (state) {
       return (meetupId) => {
-        return state.loadedMeetups.find((meetup) {
+        return state.loadedMeetups.find((meetup) => {
           return meetup.id === meetupId
-      })
+        })
       }
     }
   }

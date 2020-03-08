@@ -17,7 +17,7 @@
             :key="meetup.id"
             @click="onLoadMeetup(meetup.id)">
             <div class="title">
-              {{ meetup.title }}
+            {{ meetup.title }}
             </div>
           </v-carousel-item>
         </v-carousel>
