@@ -10,13 +10,14 @@
     </v-layout>
     <v-layout row wrap class="mt-2">
       <v-flex xs12>
-        <v-carousel>
+        <v-carousel style="cursor: pointer;">
           <v-carousel-item
             v-for="meetup in meetups"
             v-bind:src="meetup.imageUrl"
-            v-bind:key="meetup.id">
+            v-bind:key="meetup.id"
+            @click="onLoadMeetup(meetup.id)">
             <div class="title">
-              <h3 class="title" style="color:#fff;">{{ meetup.title }}</h3>
+            <h3 class="title" style="color:#fff;">{{ meetup.title }}</h3>
             </div>
           </v-carousel-item>
         </v-carousel>
@@ -24,7 +25,7 @@
     </v-layout>
     <v-layout row wrap  class="mt-2">
       <v-flex xs12 class="text-xs-center">
-       <p class="font-weight-bold text--primary">Join our earth shattering meetups!</p>
+       <p class="font-weight-bold text--primary">Join our earth shattering and emotionally invigorating meetups!</p>
       </v-flex>
     </v-layout>
   </v-container>
@@ -43,14 +44,16 @@ export default {
       ]
 
     }
+  },
+  methods: {
+    onLoadMeetup (id) {
+      this.$router.push('/meetups/' + id)
+    }
   }
 }
 
 </script>
 
 <style lang="stylus" scoped>
-.title {
-
-}
 
 </style>>
